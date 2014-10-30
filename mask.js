@@ -1,8 +1,9 @@
 /*! Licensed under MIT. (c) Sofish Lin https://github.com/sofish/mask.js */
+//立即执行的匿名函数
 (function() {
-
+  //判断是否已经存在全局的Mask变量
   if(typeof Mask !== 'undefined') return;
-
+  //局部变量，先声明再使用（好习惯）
   var mask, fire, position;
 
   // Get position of a DOM element
@@ -72,6 +73,7 @@
 
   }
 
+  //Mask被声明为全局变量
   // default debugging settings
   Mask = { count: 0 };
 
@@ -82,6 +84,7 @@
 
   // show mask
   Mask.set = function() {
+    //arguments为set函数的实参数组
     return fire.call(this, arguments);
   }
 
